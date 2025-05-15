@@ -1,17 +1,15 @@
-import { createApp } from 'vue';  // Menggunakan createApp untuk Vue 3
+import { createApp } from 'vue';
 import App from './App.vue';
-import { createRouter, createWebHistory } from 'vue-router';  // Menggunakan createRouter dan createWebHistory
+import { createRouter, createWebHistory } from 'vue-router';
 
-// Import komponen yang akan digunakan di route
-import WomenSection from './views/WomenSection.vue';
-import MenSection from './views/MenSection.vue';
-import UnavailableSection from './views/UnavailableSection.vue';
+// Import komponen yang akan digunakan
+import ProductDisplay from './components/ProductDisplay.vue';  // Pastikan ProductDisplay terhubung
 
 // Konfigurasi routes
 const routes = [
-  { path: '/women', component: WomenSection },
-  { path: '/men', component: MenSection },
-  { path: '/unavailable', component: UnavailableSection },
+  { path: '/men', component: ProductDisplay },
+  { path: '/women', component: ProductDisplay },
+  { path: '/unavailable', component: ProductDisplay },
 ];
 
 // Buat router menggunakan createRouter
